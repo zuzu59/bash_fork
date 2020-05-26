@@ -1,4 +1,4 @@
-zf200526.1209
+zf200526.1431
 
 <!-- TOC titleSize:2 tabSpaces:2 depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 skip:0 title:1 charForUnorderedList:* -->
 ## Table of Contents
@@ -7,6 +7,7 @@ zf200526.1209
 * [Tests sans les forks en //](#tests-sans-les-forks-en-)
 * [Tests avec les forks en // dans des (...)](#tests-avec-les-forks-en--dans-des-)
 * [Tests avec les forks en // dans une fonction](#tests-avec-les-forks-en--dans-une-fonction)
+* [Astuce](#astuce)
 * [Voir aussi](#voir-aussi)
 <!-- /TOC -->
 
@@ -40,7 +41,7 @@ On voit ici que les *actions* sont exécutées // !
 
 
 # Tests avec les forks en // dans une fonction
-Si on met les actions dans une >*fonction* et que l'on ajoute un '&' cela va les exécuter en //
+Si on met les actions dans une *fonction* et que l'on ajoute un '&' cela va les exécuter en //
 
 ```
 ./test2.sh
@@ -48,6 +49,14 @@ Si on met les actions dans une >*fonction* et que l'on ajoute un '&' cela va les
 On voit ici que les *actions* sont exécutées // !
 
 
+# Astuce
+On peut attendre à la fin du script que tous les forks soient terminés
+
+```
+echo "c'est en cours..."
+wait
+echo "c'est terminé !"
+```
 
 
 # Voir aussi
